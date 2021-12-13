@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li id="logo"><img src="./media/logo1.png" /><span>Spotify</span></li>
+            <li>Home</li>
+            <li>About us</li>
+        </ul>
+    </nav>
+    <div class="container">
+   <!-- icons and list of songs here  -->
+   <span>Best of Arijit Singh</span>
+   <div class="musicname">
+       <img src="./media/song1.jpg" id="song1"/>
+       <span>Agar tum sath ho</span>
+       <img src="./media/play-circle-regular.svg" class="icon" />
+    </div>
+    <div class="musicname">
+        <img src="./media/song2.jpg" />
+        <span>Chahu mai ya na</span>
+        <img src="./media/play-circle-regular.svg" class="icon"/>
+    </div>
+    <div class="musicname">
+        <img src="./media/song3.jpg" />
+        <span>Tujhe kitna chah ne lage</span>
+        <img src="./media/play-circle-regular.svg" class="icon"/>
+    </div>
+    <div class="musicname">
+        <img src="./media/song4.jpg" />
+        <span>Tose naina</span>
+        <img src="./media/play-circle-regular.svg" class="icon"/>
+   </div>
+    </div>
+    <div class="playfunctions">
+        <input type="range" id="progressbar" value="0" min="0" max="100">
+        <div class="controls">
+            <img src="./media/audioplay.gif" id="playinggif">
+            <div class="button">
+                <img src="./media/step-backward-solid.svg" />
+                <img src="./media/play-circle-regular.svg" class="icon"id="playbutton" />
+                <img src="./media/step-forward-solid.svg" />
+            </div>
+            <div id="songname">
+                <span>Agar tum sath ho</span>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
