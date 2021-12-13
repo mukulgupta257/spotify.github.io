@@ -1,7 +1,7 @@
 let songindex=0;
 let playbutton=document.getElementById("playbutton");
 let progressbar=document.getElementById("progressbar");
-let audioElement=new Audio('./audio/agartumsathho.mp3')
+let audioElement=new Audio('./audio/1.mp3')
 let songslist=[
     {songname:"Agar tum sath ho", path:"./audio/agartumsathho.mp3"},
     {songname:"Chahu mai ya na", path:"./audio/2.mp3"},
@@ -29,8 +29,24 @@ audioElement.addEventListener('timeupdate',()=>{
 progressbar.addEventListener('change',()=>{
     audioElement.currentTime=progressbar.value*audioElement.duration/100;
 })
-let songnameaccess=Array.from(document.getElementsByClassName('musicname'))
-songnameaccess.forEach(element => {
-console.log(element)
-// element.classList.icon.src="./media/pause_circle_outline_white_24dp.svg" 
+function playall(){
+    Array.from(document.getElementsByClassName('icons')).forEach(e =>{
+        e.src="./media/play-circle-regular.svg"
+    })
+}
+Array.from(document.getElementsByClassName('icons')).forEach(element => 
+    {
+        element.addEventListener('click',()=>{
+            index =parseInt(element.id)
+            console.log(element)
+            playall();
+            element.src="./media/pause_circle_outline_white_24dp.svg";
+            audioElement.currentTime=0;
+            audioElement.src='audio/'+index+'.mp3';
+            console.log(audioElement.src)
+            audioElement.play();
+            playbutton.src="./media/pause_circle_outline_white_24dp.svg";
+            document.getElementById("playinggif").style.opacity="1";
+            document.getElementById("songname").style.opacity="1";
+        })
 });

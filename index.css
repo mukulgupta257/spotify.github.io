@@ -135,3 +135,7 @@ nav ul li{
     transition: opacity 0.4s ease-in-out;
     text-align: center;
 }
+
+.icon{
+    cursor: pointer;
+}
